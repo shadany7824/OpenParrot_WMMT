@@ -16,6 +16,7 @@ Based on [OpenParrot Asakura](https://github.com/ProjectAsakura/OpenParrot).
 | WMMT6    | `1.03.04` | No improvement |
 | WMMT6R   | `2.08.00` | No improvement |
 | WMMT6RR  | `3.05.03` | Full |
+| WMMT6RR+ | `4.00.13` | In development |
 
 **Full**: Full support, including resolution patches, fixes for critical issues, etc.  
 **No improvements**: The current code is still the original implementation from when it was forked.  
