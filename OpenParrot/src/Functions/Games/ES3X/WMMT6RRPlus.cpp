@@ -697,6 +697,6 @@ static InitFunction Wmmt6RRFunc([]() {
 	}
 
 	MH_EnableHook(MH_ALL_HOOKS);
-	}, GameID::WMMT6RR);
+	}, GameID::WMMT6RRPlus);
 #endif
 #pragma optimize("", on)
