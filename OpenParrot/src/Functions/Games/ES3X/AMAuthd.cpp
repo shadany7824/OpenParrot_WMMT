@@ -642,7 +642,7 @@ amucfg-countdown=5
 amucfg-h_resol=1360
 amucfg-v_resol=768
 amucfg-logfile=.\amupdater.log
-amucfg-game_rev=3
+amucfg-game_rev=4
 
 [AMAuthdConfig]
 amdcfg-authType=ALL.NET
