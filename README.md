@@ -20,6 +20,7 @@ Based on [OpenParrot Asakura](https://github.com/ProjectAsakura/OpenParrot).
 
 **Full**: Full support, including resolution patches, fixes for critical issues, etc.  
 **No improvements**: The current code is still the original implementation from when it was forked.  
+**In development**: In development and in testing.
 
 ## Disclaimer
 
