@@ -114,6 +114,7 @@ enum class GameID
 	WMMT6,
 	WMMT6R,
 	WMMT6RR,
+    WMMT6RRPlus,
 	AMAuthd,
 	GGS,
 	Umifresh,
