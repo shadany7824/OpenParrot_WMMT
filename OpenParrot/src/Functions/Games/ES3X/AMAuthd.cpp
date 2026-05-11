@@ -635,74 +635,84 @@ dtmode-io_passphrase=Qx8hJ1KilweAp5Xm
 )";
 
 static const unsigned char AMConfigW6P[] = R"(
-[AMUpdaterConfig]
-amucfg-title=WANGAN MIDNIGHT MAXIMUM TUNE 6RR PLUS
-amucfg-lang=EN
+[AMUpdaterConfig] 
+;; AMUpdater ˆê”ÊÝ’è
+amucfg-title=˜pŠÝƒ~ƒbƒhƒiƒCƒg MAXIMUM TUNE 6RR PLUS
+amucfg-lang=JP
 amucfg-countdown=5
 amucfg-h_resol=1360
 amucfg-v_resol=768
-amucfg-logfile=.\amupdater.log
+amucfg-logfile=C:\amupdater.log
 amucfg-game_rev=4
+amucfg-h_offset=0
+amucfg-v_offset=0
 
-[AMAuthdConfig]
+[AMAuthdConfig] 
+;; AMAuthd ˆê”ÊÝ’è
 amdcfg-authType=ALL.NET
 amdcfg-sleepTime=50
 amdcfg-resoNameTimeout=180
-amdcfg-writableConfig=.\WritableConfig.ini
+amdcfg-writableConfig=F:\WritableConfig.ini
 amdcfg-showConsole=ENABLE
-amdcfg-logfile=
+amdcfg-logfile=C:\amauthd.log
 amdcfg-export_log=
-amdcfg-offlineMode=DISABLE
 
-[AllnetConfig]
+[AllnetConfig] 
+;; ALL.Net ˆê”ÊÝ’è
 allcfg-gameID=SBWJ
-allcfg-gameVer=7.00
+allcfg-gameVer=15.00
 
 [AllnetOptionRevalTime]
+;; ALL.Net Ä”FØŽžÝ’è
 allopt-reval_hour=7
 allopt-reval_minute=0
 allopt-reval_second=0
 
 [AllnetOptionTimeout]
-allopt-timeout_connect=60000
+;; ALL.Net ’ÊMƒ^ƒCƒ€ƒAƒEƒgÝ’è
+allopt-timeout_connect=60000  
 allopt-timeout_send=60000
 allopt-timeout_recv=60000
 
 [MuchaAppConfig]
-appcfg-logfile=.\muchaapp.log
+;; mucha_app Ý’è
+appcfg-logfile=C:\muchaapp.log
 appcfg-loglevel=INFO
 
 [MuchaSysConfig]
+;; MUCHA ƒVƒXƒeƒ€Ý’è
 syscfg-daemon_exe=.\MuchaBin\muchacd.exe
-syscfg-daemon_pidfile=.\muchacd.pid
-syscfg-daemon_logfile=.\muchacd.log
+syscfg-daemon_pidfile=C:\muchacd.pid
+syscfg-daemon_logfile=C:\muchacd.log
 syscfg-daemon_loglevel=INFO
 syscfg-daemon_listen=tcp:0.0.0.0:12345
 syscfg-client_connect=tcp:127.0.0.1:12345
 
 [MuchaCAConfig]
+;; MUCHA ”FØÝ’è
 cacfg-game_cd=W6P1
-cacfg-game_ver=00.12
+cacfg-game_ver=00.13
 cacfg-game_board_type=0
 cacfg-game_board_id=W6P
-cacfg-auth_server_url=https://0.0.0.0:10082/
-cacfg-auth_server_sslverify=0
-cacfg-auth_server_sslcafile=.\front.mucha-prd.nbgi-amnet.jp.cacert.pem
+cacfg-auth_server_url=https://front.mucha-prd.nbgi-amnet.jp/mucha_front/v3/
+cacfg-auth_server_sslverify=1
+cacfg-auth_server_sslcafile=.\cacert-2022-10-11.pem
 cacfg-auth_server_timeout=300
 cacfg-interval_ainfo_renew=1800
 cacfg-interval_ainfo_retry=60
 
 [MuchaDtConfig]
-dtcfg-dl_product_id=0x57355031
+;; MUCHA ƒtƒ@ƒCƒ‹”zM (DT) Ý’è
+dtcfg-dl_product_id=0x57365031
 dtcfg-dl_chunk_size=0x10000
-dtcfg-dl_image_path=.\dl_image
+dtcfg-dl_image_path=\\.\I:
 dtcfg-dl_image_size=0
 dtcfg-dl_image_type=RAW
-dtcfg-dl_image_crypt_key=0x45520913
+dtcfg-dl_image_crypt_key=0xdd149aba
 dtcfg-dl_log_level=INFO
-dtcfg-dl_lan_crypt_key=0xfz26s7201m68952x
+dtcfg-dl_lan_crypt_key=0xb94ba9fd15258bcb
 dtcfg-dl_lan_broadcast_interval=1000
-dtcfg-dl_lan_udp_port=8765
+dtcfg-dl_lan_udp_port=9878
 dtcfg-dl_lan_bandwidth_limit=0
 dtcfg-dl_lan_broadcast_address=0.0.0.0
 dtcfg-dl_wan_retry_limit=
@@ -715,10 +725,12 @@ dtcfg-dl_lan_send_timeout=
 dtcfg-dl_lan_recv_timeout=
 
 [MuchaDtModeConfig]
+;; MUCHA ƒtƒ@ƒCƒ‹”zMƒ‚[ƒhÝ’è
 dtmode-io_dir=E:\
 dtmode-io_file=W6P10JPN
 dtmode-io_conv=DECEXP
 dtmode-io_passphrase=Qx8hJ1KilweAp5Xm
+dtmode-io_ext=vhd
 )";
 
 static void PrepareAMAuth() {
@@ -738,7 +750,7 @@ static void PrepareAMAuth() {
 	else if (gameSetVer == "W6R10JPN08") gameVer = "W6R";
 	else if (gameSetVer == "W6W10JPN05") gameVer = "W6W";
 	else if (gameSetVer == "W6P10JPN00") gameVer = "W6P";
-	else gameVer = "W6W";
+	else gameVer = "W6P";
 
 	// Wangan Midnight Maximum Tune 5
 	if (gameVer == "WM5")
